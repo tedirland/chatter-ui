@@ -5,6 +5,7 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import React from 'react';
+import Auth from './components/auth/Auth';
 
 // setting a global theme based on the mui API
 const theme = createTheme({
@@ -17,7 +18,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container>
-        <h1>Dark Mode</h1>
+        <Auth />
       </Container>
     </ThemeProvider>
   );
