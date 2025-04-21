@@ -1,7 +1,9 @@
 import { Button, Stack, TextField } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Auth = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <Stack
       spacing={3}
@@ -15,8 +17,20 @@ const Auth = () => {
         justifyContent: 'center',
       }}
     >
-      <TextField type="email" label="Email" variant="outlined" />
-      <TextField type="password" label="Password" variant="outlined" />
+      <TextField
+        type="email"
+        label="Email"
+        variant="outlined"
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+      />
+      <TextField
+        type="password"
+        label="Password"
+        variant="outlined"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+      />
       <Button variant="contained">Login</Button>
     </Stack>
   );
