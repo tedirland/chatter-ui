@@ -5,7 +5,8 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import React from 'react';
-import Auth from './components/auth/Auth';
+import { RouterProvider } from 'react-router-dom';
+import router from './components/Routes';
 
 // setting a global theme based on the mui API
 const theme = createTheme({
@@ -18,7 +19,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container>
-        <Auth />
+        <RouterProvider router={router} />
       </Container>
     </ThemeProvider>
   );
